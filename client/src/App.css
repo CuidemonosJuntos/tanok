@@ -3,20 +3,1149 @@
 /*   BASIC SETUP */
 /* -----------------------------------------------------------*/
 
-* {
-  margin: 0;
+.clearfix {zoom: 1}
+.clearfix:after{
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+/* REUSABLE ELEMENTS ======================================================================= */
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+	padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+
+
+/*  HEADINGS ============================================================================= */
+
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+
+}
+
+h1 {
+	margin-top: 0;
+  margin-bottom: 20px;
+	color: #fff;
+	font-size: 270%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+	font-size: 180%;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+}
+
+h3 {
+	font-size: 110%;
+	margin-bottom: 15px;
+}
+
+h2:after {
+	display: block;
+	height: 2px;
+	background-color: #06ADFE;
+	content: " ";
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+/* PARAGRAPHS  ================================================================================ */
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/* ICONS  ====================================================================================== */
+.icon-big {
+  font-size: 300%;
+  display: block;
+  color: #06ADFE;
+  margin-bottom: 10px;
+}
+
+/*  BUTTONS  ============================================================================= */
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #06ADFE;
+    border: 1px solid #06ADFE;
+    color: #fff;
+    margin: 15px
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #06ADFE;
+    color: #06ADFE;
+}
+
+.btn:hover,
+.bnt:active {
+    background-color: #0198e1;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #0198e1;;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #0198e1;;
+    color: #fff;
+}
+
+/* HEADER   ================================================================================ */
+
+header {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./img/1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero-text-box {
+        position: absolute;
+        width: 100%;
+        padding: 0 2%;
+  }
+  .row { padding: 0 2%; }
+}
+
+
+.logo {
+  float: left;
+  margin-top: 20px
+}
+
+
+/*  Main navi */
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.main-nav li {
+  display: inline;
+  margin-left: 55px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 100%;
+  border-bottom: 2px solid transparent;
+  transition: boder-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+  border-bottom: 2px solid #06ADFE;
+}
+
+
+
+/* FEATURES   ============================================================================== */
+.section-features .long-copy{
+  margin-bottom: 30px;
+}
+
+
+
+
+/* IMAGES   ================================================================================ */
+
+.section-images {
   padding: 0;
-  box-sizing: border-box;
 }
 
-html,
-body {
+.images-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+
+.images-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.animal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.animal-photo  img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.animal-photo img:hover {
+  opacity: 1;
+  transform: scale(1.03)
+}
+
+
+
+
+/* HOW IT WORKS: THE ELEMENTS  ============================================================= */
+
+.section-elements {
+  background-color: #f4f4f4;
+}
+
+
+
+
+/*TESTIMONIALS   =========================================================================== */
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/10.jpg");
+  background-size: cover;
+  color:  #fff;
+  background-attachment: fixed;
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+
+cite img {
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+
+
+
+/*  PLANS      ============================================================================= */
+
+.section-plans {
+  background-color: #f4f4f4;
+}
+
+.plan-box {
   background-color: #fff;
-  color: #555;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 2px 2px #efefef;
 }
 
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+
+}
+
+.plan-box div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child{
+  text-align: center;
+  border: 0;
+}
+
+.plan-price {
+  font-size: 200%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #06ADFE ;
+}
+
+.plan-price-service {
+  font-size: 80%;
+}
+
+.plan-price span {
+  font-size: 50%;
+  font-weight: 300;
+}
+
+.plan-price-service{
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+
+
+/*  FOOTER    ============================================================================= */
+footer {
+  background-color: #333;
+  padding: 50px;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-icons {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-icons li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-icons li a:link,
+.social-icons li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 30px;
+}
+
+
+
+
+
+/* -----------------------------------------------------------*/
+/*  GRID */
+/* -----------------------------------------------------------*/
+
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+@media only screen and (max-width: 1023px) {
+  body { font-size: 16px;}
+  section {padding: 60px 0;}
+
+  .long-copy {
+      width: 80%;
+      margin-left: 10%;
+  }
+
+  .plan-box {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+}
+
+/*  GROUPING  ============================================================================= */
+
+.row {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		/*margin: 1% 0 1% 0%;*/
+        margin: 0;
+	}
+}
+
+
+
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+  body { font-size: 10px; }
+  section { padding: 30px 0;}
+
+  .row,
+  .hero-text-box { padding: 0 4%; }
+
+  .col {
+    width: 100%;
+    margin: 0 0 4% 0;
+  }
+
+  .main-nav { display: none; }
+
+  h1 { font-size: 180%; }
+  h2 { font-size: 150%; }
+
+  .long-copy {
+      width: 100%;
+      margin-left: 2%;
+  }
+}
+
+/*  GRID OF TWO   ============================================================================= */
+
+
+.span-2-of-2 {
+	width: 100%;
+}
+
+.span-1-of-2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-2-of-2 {
+		width: 100%;
+	}
+	.span-1-of-2 {
+		width: 100%;
+	}
+}
+
+
+/*  GRID OF THREE   ============================================================================= */
+
+
+.span-3-of-3 {
+	width: 100%;
+}
+
+.span-2-of-3 {
+	width: 66.13%;
+}
+
+.span-1-of-3 {
+	width: 32.26%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-3-of-3 {
+		width: 100%;
+	}
+	.span-2-of-3 {
+		width: 100%;
+	}
+	.span-1-of-3 {
+		width: 100%;
+	}
+}
+
+/*  GRID OF FOUR   ============================================================================= */
+
+
+.span-4-of-4 {
+	width: 100%;
+}
+
+.span-3-of-4 {
+	width: 74.6%;
+}
+
+.span-2-of-4 {
+	width: 49.2%;
+}
+
+.span-1-of-4 {
+	width: 23.8%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-4-of-4 {
+		width: 100%;
+	}
+	.span-3-of-4 {
+		width: 100%;
+	}
+	.span-2-of-4 {
+		width: 100%;
+	}
+	.span-1-of-4 {
+		width: 100%;
+	}
+}
+
+
+/*  GRID OF FIVE   ============================================================================= */
+
+
+.span-5-of-5 {
+	width: 100%;
+}
+
+.span-4-of-5 {
+  	width: 79.68%;
+}
+
+.span-3-of-5 {
+  	width: 59.36%;
+}
+
+.span-2-of-5 {
+  	width: 39.04%;
+}
+
+.span-1-of-5 {
+  	width: 18.72%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-5-of-5 {
+		width: 100%;
+	}
+	.span-4-of-5 {
+		width: 100%;
+	}
+	.span-3-of-5 {
+		width: 100%;
+	}
+	.span-2-of-5 {
+		width: 100%;
+	}
+	.span-1-of-5 {
+		width: 100%;
+	}
+}
+
+
+/*  GRID OF SIX   ============================================================================= */
+
+
+.span-6-of-6 {
+	width: 100%;
+}
+
+.span-5-of-6 {
+  	width: 83.06%;
+}
+
+.span-4-of-6 {
+  	width: 66.13%;
+}
+
+.span-3-of-6 {
+  	width: 49.2%;
+}
+
+.span-2-of-6 {
+  	width: 32.26%;
+}
+
+.span-1-of-6 {
+  	width: 15.33%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-6-of-6 {
+		width: 100%;
+	}
+	.span-5-of-6 {
+		width: 100%;
+	}
+	.span-4-of-6 {
+		width: 100%;
+	}
+	.span-3-of-6 {
+		width: 100%;
+	}
+	.span-2-of-6 {
+		width: 100%;
+	}
+	.span-1-of-6 {
+		width: 100%;
+	}
+}
+
+
+
+/*  GRID OF SEVEN   ============================================================================= */
+
+
+.span-7-of-7 {
+	width: 100%;
+}
+
+.span-6-of-7 {
+	width: 85.48%;
+}
+
+.span-5-of-7 {
+  	width: 70.97%;
+}
+
+.span-4-of-7 {
+  	width: 56.45%;
+}
+
+.span-3-of-7 {
+  	width: 41.94%;
+}
+
+.span-2-of-7 {
+  	width: 27.42%;
+}
+
+.span-1-of-7 {
+  	width: 12.91%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-7-of-7 {
+		width: 100%;
+	}
+	.span-6-of-7 {
+		width: 100%;
+	}
+	.span-5-of-7 {
+		width: 100%;
+	}
+	.span-4-of-7 {
+		width: 100%;
+	}
+	.span-3-of-7 {
+		width: 100%;
+	}
+	.span-2-of-7 {
+		width: 100%;
+	}
+	.span-1-of-7 {
+		width: 100%;
+	}
+}
+
+
+/*  GRID OF EIGHT   ============================================================================= */
+
+
+.span-8-of-8 {
+	width: 100%;
+}
+
+.span-7-of-8 {
+	width: 87.3%;
+}
+
+.span-6-of-8 {
+	width: 74.6%;
+}
+
+.span-5-of-8 {
+	width: 61.9%;
+}
+
+.span-4-of-8 {
+	width: 49.2%;
+}
+
+.span-3-of-8 {
+	width: 36.5%;
+}
+
+.span-2-of-8 {
+	width: 23.8%;
+}
+
+.span-1-of-8 {
+	width: 11.1%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-8-of-8 {
+		width: 100%;
+	}
+	.span-7-of-8 {
+		width: 100%;
+	}
+	.span-6-of-8 {
+		width: 100%;
+	}
+	.span-5-of-8 {
+		width: 100%;
+	}
+	.span-4-of-8 {
+		width: 100%;
+	}
+	.span-3-of-8 {
+		width: 100%;
+	}
+	.span-2-of-8 {
+		width: 100%;
+	}
+	.span-1-of-8 {
+		width: 100%;
+	}
+}
+
+
+/*  GRID OF NINE   ============================================================================= */
+
+
+.span-9-of-9 {
+	width: 100%;
+}
+
+.span-8-of-9 {
+	width: 88.71%;
+}
+
+.span-7-of-9 {
+	width: 77.42%;
+}
+
+.span-6-of-9 {
+	width: 66.13%;
+}
+
+.span-5-of-9 {
+	width: 54.84%;
+}
+
+.span-4-of-9 {
+	width: 43.55%;
+}
+
+.span-3-of-9 {
+	width: 32.26%;
+}
+
+.span-2-of-9 {
+	width: 20.97%;
+}
+
+.span-1-of-9 {
+	width: 9.68%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-9-of-9 {
+		width: 100%;
+	}
+	.span-8-of-9 {
+		width: 100%;
+	}
+	.span-7-of-9 {
+		width: 100%;
+	}
+	.span-6-of-9 {
+		width: 100%;
+	}
+	.span-5-of-9 {
+		width: 100%;
+	}
+	.span-4-of-9 {
+		width: 100%;
+	}
+	.span-3-of-9 {
+		width: 100%;
+	}
+	.span-2-of-9 {
+		width: 100%;
+	}
+	.span-1-of-9 {
+		width: 100%;
+	}
+}
+
+
+
+/*  GRID OF TEN   ============================================================================= */
+
+
+.span-10-of-10 {
+	width: 100%;
+}
+
+.span-9-of-10 {
+	width: 89.84%;
+}
+
+.span-8-of-10 {
+	width: 79.68%;
+}
+
+.span-7-of-10 {
+	width: 69.52%;
+}
+
+.span-6-of-10 {
+	width: 59.36%;
+}
+
+.span-5-of-10 {
+	width: 49.2%;
+}
+
+.span-4-of-10 {
+	width: 39.04%;
+}
+
+.span-3-of-10 {
+	width: 28.88%;
+}
+
+.span-2-of-10 {
+	width: 18.72%;
+}
+
+.span-1-of-10 {
+	width: 8.56%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-10-of-10 {
+		width: 100%;
+	}
+	.span-9-of-10 {
+		width: 100%;
+	}
+	.span-8-of-10 {
+		width: 100%;
+	}
+	.span-7-of-10 {
+		width: 100%;
+	}
+	.span-6-of-10 {
+		width: 100%;
+	}
+	.span-5-of-10 {
+		width: 100%;
+	}
+	.span-4-of-10 {
+		width: 100%;
+	}
+	.span-3-of-10 {
+		width: 100%;
+	}
+	.span-2-of-10 {
+		width: 100%;
+	}
+	.span-1-of-10 {
+		width: 100%;
+	}
+}
+
+
+/*  GRID OF ELEVEN   ============================================================================= */
+
+.span-11-of-11 {
+	width: 100%;
+}
+
+.span-10-of-11 {
+	width: 90.76%;
+}
+
+.span-9-of-11 {
+	width: 81.52%;
+}
+
+.span-8-of-11 {
+	width: 72.29%;
+}
+
+.span-7-of-11 {
+	width: 63.05%;
+}
+
+.span-6-of-11 {
+	width: 53.81%;
+}
+
+.span-5-of-11 {
+	width: 44.58%;
+}
+
+.span-4-of-11 {
+	width: 35.34%;
+}
+
+.span-3-of-11 {
+	width: 26.1%;
+}
+
+.span-2-of-11 {
+	width: 16.87%;
+}
+
+.span-1-of-11 {
+	width: 7.63%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-11-of-11 {
+		width: 100%;
+	}
+	.span-10-of-11 {
+		width: 100%;
+	}
+	.span-9-of-11 {
+		width: 100%;
+	}
+	.span-8-of-11 {
+		width: 100%;
+	}
+	.span-7-of-11 {
+		width: 100%;
+	}
+	.span-6-of-11 {
+		width: 100%;
+	}
+	.span-5-of-11 {
+		width: 100%;
+	}
+	.span-4-of-11 {
+		width: 100%;
+	}
+	.span-3-of-11 {
+		width: 100%;
+	}
+	.span-2-of-11 {
+		width: 100%;
+	}
+	.span-1-of-11 {
+		width: 100%;
+	}
+}
+
+
+/*  GRID OF TWELVE   ============================================================================= */
+
+.span-12-of-12 {
+	width: 100%;
+}
+
+.span-11-of-12 {
+	width: 91.53%;
+}
+
+.span-10-of-12 {
+	width: 83.06%;
+}
+
+.span-9-of-12 {
+	width: 74.6%;
+}
+
+.span-8-of-12 {
+	width: 66.13%;
+}
+
+.span-7-of-12 {
+	width: 57.66%;
+}
+
+.span-6-of-12 {
+	width: 49.2%;
+}
+
+.span-5-of-12 {
+	width: 40.73%;
+}
+
+.span-4-of-12 {
+	width: 32.26%;
+}
+
+.span-3-of-12 {
+	width: 23.8%;
+}
+
+.span-2-of-12 {
+	width: 15.33%;
+}
+
+.span-1-of-12 {
+	width: 6.86%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-12-of-12 {
+		width: 100%;
+	}
+	.span-11-of-12 {
+		width: 100%;
+	}
+	.span-10-of-12 {
+		width: 100%;
+	}
+	.span-9-of-12 {
+		width: 100%;
+	}
+	.span-8-of-12 {
+		width: 100%;
+	}
+	.span-7-of-12 {
+		width: 100%;
+	}
+	.span-6-of-12 {
+		width: 100%;
+	}
+	.span-5-of-12 {
+		width: 100%;
+	}
+	.span-4-of-12 {
+		width: 100%;
+	}
+	.span-3-of-12 {
+		width: 100%;
+	}
+	.span-2-of-12 {
+		width: 100%;
+	}
+	.span-1-of-12 {
+		width: 100%;
+	}
+}

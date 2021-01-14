@@ -17,9 +17,9 @@ export default function Signout() {
     <GoogleLogout
       onLogoutSuccess={onSignout}
       render={({ onClick }) => (
-        <span  onClick={onClick}>
+        <button  onClick={onClick}>
             Signout
-        </span>
+        </button>
       )}
     />
   );

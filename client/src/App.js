@@ -11,7 +11,7 @@ import MyLearning from './components/MyLearning';
 function App() {
   const initialState = useContext(Context);
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log({ state });
+ // console.log({ state });
 
   return (
       <Router>

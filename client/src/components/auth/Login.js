@@ -16,7 +16,6 @@ export default function Login() {
                 headers: { authorization: tokenId }
             });
             const { me } = await client.request(ME_QUERY);
-            //console.log({ me });
             dispatch({ type: "LOGIN_USER", payload: me });
             dispatch({ type: "IS_LOGGED_IN", payload: googleUser.isSignedIn() });
         } catch (err) {
@@ -34,7 +33,7 @@ export default function Login() {
                 onSuccess={onSuccess}
                 onFailure={onFailure}
                 isSignedIn={true}
-                buttonText="Login with Google"
+                buttonText="Login"
                 theme="dark"
             />
     )
