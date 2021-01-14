@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Login from '../auth/Login';
 import Context from '../../context';
+import Signout from '../auth/Signout';
 
 export default function Nav() {
     const { state } = useContext(Context);
@@ -13,7 +14,8 @@ export default function Nav() {
             <Link to='/mylearning'>
                 {state.isAuth ? <button>My learning</button> : ""}
             </Link>
-            <Login />
+            {state.isAuth ? <Signout /> : <Login />}
+            <br></br>
         </div>
     )
 }
