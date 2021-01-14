@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import { GraphQLClient } from "graphql-request";
 import { GoogleLogin } from "react-google-login";
 
-//import Context from '../../context';
+import Context from '../../context';
 import { ME_QUERY } from '../../graphql/queries';
 
 export default function Login() {
 
-   // const { dispatch } = useContext(Context);
+    const { dispatch } = useContext(Context);
 
     const onSuccess = async googleUser => {
         try {
@@ -16,9 +16,9 @@ export default function Login() {
                 headers: { authorization: tokenId }
             });
             const { me } = await client.request(ME_QUERY);
-            console.log({ me });
-        //    dispatch({ type: "LOGIN_USER", payload: me });
-        //   dispatch({ type: "IS_LOGGED_IN", payload: googleUser.isSignedIn() });
+            //console.log({ me });
+            dispatch({ type: "LOGIN_USER", payload: me });
+            dispatch({ type: "IS_LOGGED_IN", payload: googleUser.isSignedIn() });
         } catch (err) {
             onFailure(err);
         }
@@ -27,7 +27,6 @@ export default function Login() {
     const onFailure = err => {
         console.error("Error logging in", err)
     }
-
 
     return (
              <GoogleLogin
